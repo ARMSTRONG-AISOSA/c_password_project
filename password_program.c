@@ -154,7 +154,7 @@ unsigned int simple_hash(const char *password) //*password: Cheack @ notes.txt -
     unsigned int hash = 5381;
     int c; // Declares an integer c to store each character of the string, one at a time, as it loops through the string.
 
-    while ((c = *password++)) //loop
+    while ((c = *password++)) // loop
     {
         hash = ((hash << 5) + hash) + c;
     }
@@ -167,7 +167,8 @@ int main()
     char password[50]; // defined here so this function could still have access to it
     int strength = 0;
 
-    printf("=== Cross-Platform Password Input Demo ===\n\n");
+    printf(ANSI_BOLD ANSI_COLOR_YELLOW "\n=== Cross-Platform Password Input Demo ===" ANSI_RESET);
+    printf("\n\n");
 
     do
     {
